@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  --color-base-white: hsla(0, 0%, 100%);
+  --color-base-600: hsla(274, 84%, 12%, 1);
+  --color-base-500: hsla(232, 17%, 35%, 1);
+  --color-base-400: hsla(218, 17%, 62%, 1);
+  --color-base-300: hsla(275, 18%, 79%, 1);
+  --color-base-200: hsla(312, 91%, 96%, 1);
+  --color-base-100: hsla(233, 100%, 97%, 1);
+  font-family: "Staatliches";
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--color-base-100);
+  text-align: center;
+  width: 100vw;
+}
+header {
+  padding: 3.2rem 0 3.6rem;
+  background: var(--color-base-400);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 1.4rem;
+}
+header h1 {
+  background: var(--color-base-300);
+  color: var(--color-base-white);
+  text-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  font-weight: 400;
+  line-height: 3.4rem;
+  font-size: 4rem;
+  padding: 0.6rem 0;
+}
+
+main p {
+  color: var(--color-base-600);
+  text-align: center;
+  font-family: "Palanquin";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-bottom: 6.3rem;
+}
+
+main figcaption {
+  position: relative;
+  max-width: max-content;
+  margin: 0 auto;
+}
+
+main figcaption strong {
+  color: var(--color-base-500);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3.4rem;
+  letter-spacing: 0.1rem;
+  border-radius: 35rem;
+  padding: 0.1rem 2.4rem;
+  background: var(--color-base-200);
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+}
+
+.details,
+footer {
+  display: none;
+}
+
+main figure figcaption:nth-child(5) {
+  display: none;
+}
+main figure figcaption:nth-child(6) {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  body {
+    display: flex;
+    gap: 9.8rem;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+  }
+  .details {
+    display: block;
+    color: var(--color-base-white);
+    padding: 4.8rem;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 2rem;
+  }
+  main p {
+    display: none;
+  }
+  header {
+    width: 37.7rem;
+    height: 100%;
+  }
+  .container {
+    margin-top: 6.4rem;
+  }
+  main figure {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "A B C"
+      "D B E"
+      "D F E";
+    gap: 3.2rem;
+  }
+  main figure figcaption:nth-child(1) {
+    grid-area: A;
+  }
+  main figure figcaption:nth-child(2) {
+    grid-area: B;
+  }
+  main figure figcaption:nth-child(3) {
+    grid-area: C;
+  }
+  main figure figcaption:nth-child(4) {
+    grid-area: D;
+  }
+  main figure figcaption:nth-child(5) {
+    grid-area: F;
+    display: block;
+  }
+  main figure figcaption:nth-child(6) {
+    grid-area: E;
+    display: block;
+  }
+
+  footer {
+    display: block;
+    background-color: var(--background-main-color);
+    width: 100%;
+    padding: 5rem;
+  }
+
+  footer p,
+  footer p a {
+    color: #4a4e69;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    text-align: center;
+  }
+
+  footer p a {
+    font-weight: bold;
+  }
+}
